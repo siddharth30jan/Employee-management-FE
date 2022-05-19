@@ -62,9 +62,6 @@ const FavBanks = ({ allData, favouriteBanks }) => {
                         fixedHeader
                         fixedHeaderScrollHeight="450px"
                         highlightOnHover
-                        onRowClicked={(row) => {
-                            navigate(`/bank-details/${row?.ifsc}`)
-                        }}
                         subHeader
                         subHeaderComponent={
                             <div className="filterOptions">
