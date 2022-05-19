@@ -1,10 +1,6 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import DataTable from 'react-data-table-component'
-import Dropdown from 'react-dropdown';
+import React from 'react'
 import 'react-dropdown/style.css';
 import './BankDetails.css'
-import { Loader } from 'rsuite';
 import { useParams } from 'react-router';
 
 

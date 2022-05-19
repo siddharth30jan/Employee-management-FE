@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import BankTable from "./components/BankTable";
 import BankDetails from "./components/BankDetails/BankDetails";
 import FavBanks from "./components/FavBanks/FavBanks";

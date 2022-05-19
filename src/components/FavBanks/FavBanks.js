@@ -1,12 +1,9 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import DataTable from 'react-data-table-component'
-import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import './FavBanks.css'
-import { Loader } from 'rsuite';
-import { Link, Navigate, useNavigate } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -15,7 +12,6 @@ const FavBanks = ({ allData, favouriteBanks }) => {
 
 
     const [myFavouriteBanks, setmyFavouriteBanks] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate();
     const dataArray = Object.keys(allData).map(val => allData[val]);
     const temp = []
@@ -61,8 +57,6 @@ const FavBanks = ({ allData, favouriteBanks }) => {
                     <DataTable
                         title="Favourite Banks"
                         columns={columns}
-                        progressPending={isLoading}
-                        progressComponent={<Loader backdrop content="loading..." vertical />}
                         data={myFavouriteBanks}
                         pagination
                         fixedHeader

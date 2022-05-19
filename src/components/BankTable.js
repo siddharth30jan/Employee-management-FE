@@ -5,7 +5,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import './BankTable.css'
 import { Loader } from 'rsuite';
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -45,9 +45,9 @@ const BankTable = ({ bankData, setBankData, filteredBankData, setFilteredBankDat
     const postFilterBankData = (paramToSearch) => {
 
         if (search) {
-
+            let searchParam = search.trim()
             const result = bankData?.filter(bank => {
-                return bank[`${paramToSearch}`]?.toLowerCase()?.match(search?.toLowerCase())
+                return bank[`${paramToSearch}`]?.toLowerCase()?.match(searchParam?.toLowerCase())
             })
             setFilteredBankData(result)
         } else {
@@ -145,7 +145,7 @@ const BankTable = ({ bankData, setBankData, filteredBankData, setFilteredBankDat
                         title="All Banks"
                         columns={columns}
                         progressPending={isLoading}
-                        progressComponent={<Loader backdrop content="loading..." vertical />}
+                        progressComponent={<Loader backdrop content="Loading..." vertical />}
                         data={filteredBankData}
                         pagination
                         fixedHeader
@@ -156,23 +156,25 @@ const BankTable = ({ bankData, setBankData, filteredBankData, setFilteredBankDat
                             <div className="filterOptions">
                                 <button onClick={() => { navigate(`/favourites`) }}>Show fav banks</button>
                                 <Dropdown
+                                    name="city"
                                     className="cityDropdown"
                                     options={cityOptions}
                                     onChange={(city) => setSelectedCity(city?.value)}
                                     value={selectedCity}
                                     placeholder="Select City" />
                                 <Dropdown
+                                    name="category"
                                     className="categoryDropdown"
                                     options={categoryOptions}
                                     onChange={(category) => setSelectedCategory(category?.value)}
                                     value={selectedCategory}
                                     placeholder="Select Category" />
                                 <input
-
+                                    name="searchInput"
                                     className="inputSearch"
                                     type="text"
                                     disabled={!selectedCategory}
-                                    placeholder="Search here.."
+                                    placeholder="Search.. (Ensure category selection)"
                                     value={search}
                                     onChange={(e) => setSearch(e.target.value)}
                                 />
