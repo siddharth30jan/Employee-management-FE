@@ -1,0 +1,18 @@
+.outer {
+    padding: 50px;
+    background: beige;
+}
+
+.cityDropdown,.categoryDropdown,.inputSearch {
+    width: 200px;
+    margin-left: 12px;
+}
+
+.inputSearch {
+    height: 30px;
+    padding: 2px;
+}
+
+.filterOptions {
+    display: flex;
+}
