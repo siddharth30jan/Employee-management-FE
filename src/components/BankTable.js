@@ -168,12 +168,14 @@ const BankTable = ({ bankData, setBankData, filteredBankData, setFilteredBankDat
                                     options={categoryOptions}
                                     onChange={(category) => setSelectedCategory(category?.value)}
                                     value={selectedCategory}
-                                    placeholder="Select Category" />
+                                    placeholder="Select Category"
+                                    disabled={isLoading}
+                                />
                                 <input
                                     name="searchInput"
                                     className="inputSearch"
                                     type="text"
-                                    disabled={!selectedCategory}
+                                    disabled={!selectedCategory || isLoading}
                                     placeholder="Search.. (Ensure category selection)"
                                     value={search}
                                     onChange={(e) => setSearch(e.target.value)}
