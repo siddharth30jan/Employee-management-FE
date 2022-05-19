@@ -3,7 +3,7 @@ import BankTable from "./components/BankTable";
 import BankDetails from "./components/BankDetails/BankDetails";
 import FavBanks from "./components/FavBanks/FavBanks";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 
 
 function App() {
