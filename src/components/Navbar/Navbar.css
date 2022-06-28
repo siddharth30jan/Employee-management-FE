@@ -1,0 +1,26 @@
+.outerNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: aquamarine;
+}
+
+.link {
+    margin-right: 35px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.inner {
+    width: 550px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 15px;
+}
+/* .selectSearch{
+    padding: 10px;
+} */

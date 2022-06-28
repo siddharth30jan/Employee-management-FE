@@ -5,7 +5,7 @@
 
 .cityDropdown,.categoryDropdown,.inputSearch {
     width: 220px;
-    margin-left: 12px;
+    
 }
 
 .inputSearch {
@@ -15,4 +15,8 @@
 
 .filterOptions {
     display: flex;
+}
+
+.categoryDropdown{
+    font-size: 20px;
 }

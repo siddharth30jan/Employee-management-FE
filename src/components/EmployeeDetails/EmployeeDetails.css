@@ -1,8 +1,14 @@
 .parent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    width: 800px;
+    margin: 60px auto;
+    border: 2px solid lightgrey;
+    padding: 45px;
+    background: antiquewhite;
+
 }
 
 .container,.innerContainer1,.innerContainer2,.innerContainer3 {
